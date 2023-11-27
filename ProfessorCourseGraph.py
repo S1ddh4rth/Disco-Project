@@ -1,11 +1,18 @@
 from ProfessorsAndCourses import *
-def Matrix(CDCList,Penalty):
-    Matrix = []
-    for cdc in CDCList:
-        for Prof in Penalty:
-            for Cdc,penalty in Prof:
-                if Cdc == cdc:
-                    Matrix.append((list([cdc,penalty])))
-    return Matrix
+import numpy as np 
 
-print((Matrix(CoursesInSem(1)[0],assignPenaltyCDC(profCDC(read())))))
+def Matrix(Penalty):
+    Matrix = []
+    no_profs=len(Penalty)
+    no_courses=len(Penalty[1])
+    for row in Penalty:
+        matrix_row=[]
+        for assignment in row:
+            matrix_row.append(assignment[1])
+        Matrix.append(matrix_row)
+    for j in range(11-no_profs):
+        Matrix.append([1000]*no_courses)
+
+    return np.array(Matrix)
+
+print(Matrix(assignPenaltyCDC(profCDC(read()))))

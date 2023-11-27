@@ -1,4 +1,6 @@
 from InputFile import *
+import numpy as np
+
 def profCDC(List):
     #CDC list for all the professors
     profCDCList=[]
@@ -11,14 +13,7 @@ def profCDC(List):
                 profcdc.append(Course)
         profCDCList.append(profcdc)
 
-    return profCDCList
-
-def assignPenaltyCDC(List):
-    #cost for CDCs depending on preference
-    penalty = []
-    for Prof in List:
-        penalty.append(list(zip(Prof[2:],[x for x in range(1,len(Prof[2:])+1)])))
-    return penalty
+    return np.array(profCDCList)
 
 def CoursesInSem(sem):
     coursesSem1 = [f"FDCDC_F1{x}" for x in range(1,12)]
@@ -28,3 +23,28 @@ def CoursesInSem(sem):
 
     if (sem == 1):return (coursesSem1,electivesSem1)
     else:return (coursesSem2,electivesSem2)
+
+def assignPenaltyCDC(List):
+    # assigning cost for CDCs depending on preference order submitted by professors
+    penalty = []
+
+    for Prof_preference_list in List:
+        penaltytemp=[]
+        penalty_prof=[]
+        assignedCDCs=Prof_preference_list[2:]
+        penaltytemp={}
+        pen_value=1
+        for preference in Prof_preference_list[2::]:
+            penaltytemp[preference]=pen_value
+            pen_value+=1
+        # penaltytemp.append(list(zip(Prof_preference_list[2:],[x for x in range(1,len(Prof_preference_list[2:])+1)])))
+        for CDC in CoursesInSem(1)[0]:
+            if CDC in assignedCDCs:
+                value=penaltytemp[CDC]
+                penalty_prof.append((CDC,value))
+            else:
+                penalty_prof.append((CDC,1000))
+        penalty.append(penalty_prof)
+    return penalty #returns a list of lists containing corresponding penalties for all CDCs in a semester
+
+# print(assignPenaltyCDC(profCDC(read())))
