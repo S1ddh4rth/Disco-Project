@@ -12,11 +12,13 @@ def profCDC(List):
                 #checking if its a CDC
                 profcdc.append(Course)
         profCDCList.append(profcdc)
+    # print(len(profCDCList))
 
     return np.array(profCDCList)
 
 def CoursesInSem(sem):
     coursesSem1 = [f"FDCDC_F1{x}_p{y}" for x in range(1,12) for y in [1,2]]
+    # coursesSem1 = [f"FDCDC_F1{x}" for x in range(1,12)]
     electivesSem1 = [f"ELEC_F1{x}" for x in range(1,13)]
     coursesSem2 = [f"FDCDC_F2{x}" for x in range(1,12)]
     electivesSem2 = [f"ELEC_F2{x}" for x in range(1,13)]
@@ -27,6 +29,7 @@ def CoursesInSem(sem):
 def assignPenaltyCDC(List):
     # assigning cost for CDCs depending on preference order submitted by professors
     penalty = []
+    # print(len(List))
 
     for Prof_preference_list in List:
         penaltytemp=[]
@@ -38,6 +41,7 @@ def assignPenaltyCDC(List):
             penaltytemp[preference]=pen_value
             if preference[-1]=="2":
                 pen_value+=1
+            # pen_value+=1
         # penaltytemp.append(list(zip(Prof_preference_list[2:],[x for x in range(1,len(Prof_preference_list[2:])+1)])))
         for CDC in CoursesInSem(1)[0]:
             if CDC in assignedCDCs:

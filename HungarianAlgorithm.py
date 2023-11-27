@@ -1,4 +1,5 @@
 import numpy as np
+import pandas as pd
 from ProfessorCourseGraph import *
 
 def min_zero_row(zero_mat, mark_zero):
@@ -134,12 +135,14 @@ def main():
 	and elements set in cost matrix are available.'''
 
 	#The matrix who you want to find the minimum sum
-	cost_matrix = Matrix(assignPenaltyCDC(profCDC(read())))
+	cost_matrix = Matrix(assignPenaltyCDC(profCDC(read()))).transpose()
 	ans_pos = hungarian_algorithm(cost_matrix.copy())#Get the element position.
 	ans, ans_mat = ans_calculation(cost_matrix, ans_pos)#Get the minimum or maximum value and corresponding matrix.
 
 	#Show the result
 	print(f"Linear Assignment problem result: {ans:.0f}\n{ans_mat}")
+	
+	
 
 	# #If you want to find the maximum value, using the code as follows: 
 	# #Using maximum value in the cost_matrix and cost_matrix to get net_matrix

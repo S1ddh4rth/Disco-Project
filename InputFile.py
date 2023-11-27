@@ -6,10 +6,11 @@ def read():
     input = []
     with open(csv_path, newline='') as csvfile:
         reader = csv.reader(csvfile)
-        for row in list(reader)[2:]:
+        for row in list(reader)[0::]:
            #Omitting the header Rows
            if row!=[]:
             input.append(row)
+    print(len(input))
     return input
 
 def DisplayInput(List):

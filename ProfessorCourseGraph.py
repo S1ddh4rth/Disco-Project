@@ -10,8 +10,11 @@ def Matrix(Penalty):
         for assignment in row:
             matrix_row.append(assignment[1])
         Matrix.append(matrix_row)
-    for j in range(11-no_profs):
-        Matrix.append([1000]*no_courses)
+        np.array(Matrix)
+    for j in range(no_profs-22):
+        column=[[1000]]*no_profs
+        Matrix=np.append(Matrix,column,axis=1)
+    print(no_profs)
 
     return np.array(Matrix)
 
