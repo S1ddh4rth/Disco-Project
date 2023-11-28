@@ -18,4 +18,4 @@ def Matrix(Penalty):
 
     return np.array(Matrix)
 
-print(Matrix(assignPenaltyCDC(profCDC(read()))))
+# print(Matrix(assignPenaltyCDC(profCDC(read()))))
