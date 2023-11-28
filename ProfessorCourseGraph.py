@@ -14,7 +14,7 @@ def Matrix(Penalty):
     for j in range(no_profs-22):
         column=[[1000]]*no_profs
         Matrix=np.append(Matrix,column,axis=1)
-    print(no_profs)
+    # print(no_profs)
 
     return np.array(Matrix)
 

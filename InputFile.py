@@ -10,7 +10,7 @@ def read():
            #Omitting the header Rows
            if row!=[]:
             input.append(row)
-    print(len(input))
+    # print(len(input))
     return input
 
 def DisplayInput(List):
