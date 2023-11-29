@@ -8,7 +8,7 @@ ans_mat = ans_mat.transpose()
 
 with open("Answer.csv", 'w+') as csvfile2: 
     csvwriter = csv.writer(csvfile2)
-    csvwriter.writerows(ans_mat)
+    csvwriter.writerows(ans_mat.transpose())
     csvwriter.writerow([])
     csvwriter.writerow([])
     csvwriter.writerow([])
