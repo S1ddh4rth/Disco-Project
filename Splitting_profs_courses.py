@@ -54,7 +54,7 @@ def adjust(adjusted):
     with open(csv_path2, 'w+') as csvfile2:   
                 csvwriter = csv.writer(csvfile2)
                 csvwriter.writerows(adjusted)
-adjust(read1())
+# adjust(read1())
 
 
     

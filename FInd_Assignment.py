@@ -2,8 +2,13 @@ from HungarianAlgorithm import *
 from ProfessorCourseGraph import *
 from scipy.optimize import linear_sum_assignment
 from Graph import *
+from Splitting_profs_courses import *
+
+adjust(read1())
 answers=[]
 vals=[]
+if read()==None:
+     exit()
 matrix , PermutaedElectives = Matrix(assignPenaltyCDC(profCDC(read())))
 for i in range(len(matrix)):
     row,col = linear_sum_assignment(matrix[i])

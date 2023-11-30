@@ -33,7 +33,7 @@ def conMatrixToGraph(Matrix):
                 v1.append(Prof),v2.append(Course)
 
     return v1,v2
-
+'''
 def ProfCourseGraph(v1,v2):
     graph = BipartiteGraph(v1,v2)
     graph.DisplayGraph()
@@ -62,3 +62,4 @@ for answer in ans:
             v1n.append(profs[v])
     for v in v2:
         v2n.append(courses[v][:-3:])
+        '''
