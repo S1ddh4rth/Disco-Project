@@ -3,13 +3,6 @@ import pandas as pd
 from ProfessorCourseGraph import *
 
 def min_zero_row(zero_mat, mark_zero):
-	
-	'''
-	The function can be splitted into two steps:
-	#1 The function is used to find the row which containing the fewest 0.
-	#2 Select the zero number on the row, and then marked the element corresponding row and column as False
-	'''
-
 	#Find the row
 	min_row = [99999, -1]
 
@@ -24,10 +17,6 @@ def min_zero_row(zero_mat, mark_zero):
 	zero_mat[:, zero_index] = False
 
 def mark_matrix(mat):
-
-	'''
-	Finding the returning possible solutions for LAP problem.
-	'''
 
 	#Transform the matrix to boolean matrix(0 = True, others = False)
 	cur_mat = mat
@@ -127,13 +116,6 @@ def ans_calculation(mat, pos):
 	return total, ans_mat
 
 def main(input):
-
-	'''Hungarian Algorithm: 
-	Finding the minimum value in linear assignment problem.
-	Therefore, we can find the minimum value set in net matrix 
-	by using Hungarian Algorithm. In other words, the maximum value
-	and elements set in cost matrix are available.'''
-
 	#The matrix who you want to find the minimum sum
 	cost_matrix = input.transpose()
 	ans_pos = hungarian_algorithm(cost_matrix.copy())#Get the element position.
@@ -143,22 +125,6 @@ def main(input):
 	# print(f"Linear Assignment problem result: {ans:.0f}\n{ans_mat}")
 	return ans,ans_mat
 	
-	
-
-	# #If you want to find the maximum value, using the code as follows: 
-	# #Using maximum value in the cost_matrix and cost_matrix to get net_matrix
-	# profit_matrix = np.array([[7, 6, 2, 9, 2],
-	# 			[6, 2, 1, 3, 9],
-	# 			[5, 6, 8, 9, 5],
-	# 			[6, 8, 5, 8, 6],
-	# 			[9, 5, 6, 4, 7]])
-	# max_value = np.max(profit_matrix)
-	# cost_matrix = max_value - profit_matrix
-	# ans_pos = hungarian_algorithm(cost_matrix.copy())#Get the element position.
-	# ans, ans_mat = ans_calculation(profit_matrix, ans_pos)#Get the minimum or maximum value and corresponding matrix.
-	# #Show the result
-	# print(f"Linear Assignment problem result: {ans:.0f}\n{ans_mat}")
-
 
 if __name__ == '__main__':
 	main()
