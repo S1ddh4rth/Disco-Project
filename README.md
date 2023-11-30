@@ -19,4 +19,7 @@ problem. The paper presents a few test cases and a set of close to optimal solut
 
 ## Documentation
 
-[Optimizing University Course Assignment.pdf](https://github.com/S1ddh4rth/Disco-Project/blob/main/Optimizing%20University%20Course%20Assignment.pdf)https://github.com/S1ddh4rth/Disco-Project/blob/main/Optimizing%20University%20Course%20Assignment.pdf and [Results and Crash test consistency report.pdf](https://github.com/S1ddh4rth/Disco-Project/blob/main/Results%20and%20Crash%20test%20consistency%20report.pdf)https://github.com/S1ddh4rth/Disco-Project/blob/main/Results%20and%20Crash%20test%20consistency%20report.pdf have been added to the repository
+Overview Paper:
+[Optimizing University Course Assignment.pdf](https://github.com/S1ddh4rth/Disco-Project/blob/main/Optimizing%20University%20Course%20Assignment.pdf)https://github.com/S1ddh4rth/Disco-Project/blob/main/Optimizing%20University%20Course%20Assignment.pdf
+Resulsta nd Crash test consistency report:
+[Results and Crash test consistency report.pdf](https://github.com/S1ddh4rth/Disco-Project/blob/main/Results%20and%20Crash%20test%20consistency%20report.pdf)https://github.com/S1ddh4rth/Disco-Project/blob/main/Results%20and%20Crash%20test%20consistency%20report.pdf 
