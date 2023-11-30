@@ -62,8 +62,3 @@ for answer in ans:
             v1n.append(profs[v])
     for v in v2:
         v2n.append(courses[v][:-3:])
-    #ProfCourseGraph(v1n,v2n)
-    #print()
-
-    # nx.draw(G,with_labels=True, font_weight='bold')
-    # plt.show()

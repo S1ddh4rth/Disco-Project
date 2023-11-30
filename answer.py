@@ -29,14 +29,5 @@ for i in range(len(matrix)):
     print()
 
 
-    # vals.append(linear_sum_assignment(i)[0])
-#     answers.append((main(i)[0],main(i)[1]))
-# value_best=min(vals)
-# for i in answers:
-#     if i[0]==value_best:
-#         print()
-#         print(i[1])
-
-
 
 
