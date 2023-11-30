@@ -126,7 +126,7 @@ def ans_calculation(mat, pos):
 		ans_mat[pos[i][0], pos[i][1]] = mat[pos[i][0], pos[i][1]]
 	return total, ans_mat
 
-def main():
+def main(input):
 
 	'''Hungarian Algorithm: 
 	Finding the minimum value in linear assignment problem.
@@ -135,12 +135,13 @@ def main():
 	and elements set in cost matrix are available.'''
 
 	#The matrix who you want to find the minimum sum
-	cost_matrix = Matrix(assignPenaltyCDC(profCDC(read()))).transpose()
+	cost_matrix = input.transpose()
 	ans_pos = hungarian_algorithm(cost_matrix.copy())#Get the element position.
 	ans, ans_mat = ans_calculation(cost_matrix, ans_pos)#Get the minimum or maximum value and corresponding matrix.
 
 	#Show the result
-	print(f"Linear Assignment problem result: {ans:.0f}\n{ans_mat}")
+	# print(f"Linear Assignment problem result: {ans:.0f}\n{ans_mat}")
+	return ans,ans_mat
 	
 	
 

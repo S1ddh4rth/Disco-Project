@@ -3,7 +3,7 @@ import csv
 def read1():
     # Reading from input file
     import csv  
-    csv_path = "InputFile.csv" 
+    csv_path = "InputFile2.csv" 
     input = []
     adjusted=[]
     with open(csv_path, newline='') as csvfile:
