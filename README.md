@@ -1,4 +1,4 @@
-# CSF222 Project : University Course Assignment 
+# CSF222 Project 2023: University Course Assignment 
 
 ## Team Members
 
