@@ -19,5 +19,4 @@ problem. The paper presents a few test cases and a set of close to optimal solut
 
 ## Documentation
 
-Optimizing University Course Assignment.pdf
-Results and Crash test consistency report.pdf
+Optimizing University Course Assignment.pdf and Results and Crash test consistency report.pdf have been added to the repository
